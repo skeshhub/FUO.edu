@@ -3,24 +3,25 @@
     margin: 0;
     padding: 0;
 }
+
 nav ul li a.active {
     font-weight: bold;
     color: #007bff;
     text-decoration: underline;
 }
+
 body {
     font-family: Arial, sans-serif;
-    background: #f0f2f5;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background: url('background.png') no-repeat center center fixed;
-    background-size: cover; 
+    background-size: cover;
+    margin: 0; /* Ensure no default margin */
 }
 
 .box {
-
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -31,6 +32,9 @@ body {
     width: 100%;
     max-width: 400px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Optional: add these for better flex behavior */
+    flex-shrink: 0; /* Prevents shrinking */
 }
 
 .header {
@@ -115,12 +119,16 @@ button {
     width: 80px;
     height: auto;
     margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 480px) {
     .box {
         padding: 20px;
-        margin: 10px;
+        margin: 15px; /* Adds safe margin on small screens */
+        width: calc(100% - 30px); /* Respect the margin */
     }
     .button {
         flex-direction: column;
