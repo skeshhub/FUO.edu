@@ -3,244 +3,152 @@
     margin: 0;
     padding: 0;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background: url('background.png') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4); 
-    z-index: -1;
-}
-
-header {
-    position: sticky;     
-    top: 0;               
-    width: 100%;          
-    z-index: 1000;        
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 1rem 0;      /* Vertical padding only */
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-header h3 {
-    color: white;
-    font-size: 1.9rem;
-    line-height: 1.8rem;
-    margin: 0.5rem 0;
-    margin-bottom: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Key changes here */
-.site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  /* Logo left, nav right */
-    gap: 1rem;
-    padding: 0 2rem;                 /* Controls distance from screen edges – adjust as needed */
-    width: 100%;
-    max-width: none;                 /* Remove the 1200px limit */
-    margin: 0 auto;
-}
-
-.logo {
-    height: 5rem;
-    width: auto;
-    flex-shrink: 0;
-    /* Removed padding – now controlled by .site-header */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0 0 20px 0;             /* Only bottom padding kept */
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.5rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-    background: rgb(255, 187, 0);
-    color: #000000;
-}
-
 nav ul li a.active {
     font-weight: bold;
-    color: #ffffff;
-    background: rgb(0, 85, 37);
+    color: #007bff;
+    text-decoration: underline;
 }
-
-main {
-    flex: 1;
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 40px 20px;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover; 
 }
 
-section {
-    background: rgba(255, 255, 255, 0.88);
+.box {
+
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 40px;
-    border-radius: 12px;
+    
+    padding: 30px;
+    border-radius: 10px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    max-width: 800px;
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header h3 {
+    margin: 0;
+    color: #005f1a;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h2 {
     text-align: center;
-    color: #005f1a;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-}
-
-p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 form label {
     display: block;
-    margin: 15px 0 8px;
+    margin: 10px 0 5px;
     font-weight: bold;
-    color: #444;
-    text-align: left;
+    color: #555;
 }
 
-form input,
-form textarea {
+form input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
     background: rgba(255, 255, 255, 0.9);
-    transition: border-color 0.3s;
 }
 
-form input:focus,
-form textarea:focus {
+form input:focus {
     outline: none;
-    border-color: #00ff88;
-    box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.2);
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
 }
 
-form textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 14px;
+.button {
+    display: flex;
+    gap: 10px;
     margin-top: 20px;
-    background: #026728;
-    color: white;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    border-radius: 6px;
+    font-size: 16px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
-button[type="submit"]:hover {
-    background: #ffa200;
-    color: #000000;
+.signup {
+    background: #026728;
+    color: white;
 }
 
-footer {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+.signup:hover {
+    background: #137beb;
+}
+
+.login {
+    background: #ddb100;
+    color: #333;
+}
+
+.login:hover {
+    background: #137beb;
     color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+    .box {
+        padding: 20px;
+        margin: 10px;
+    }
+    .button {
+        flex-direction: column;
+    }
 }
 
 footer nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    list-style: none;
+    margin: 15px 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
 footer nav ul li a {
-    color: #ffa200;
+    color: white;
+    text-decoration: none;
 }
 
 footer nav ul li a:hover {
-    color: #000000;
+    text-decoration: underline;
 }
 
 footer p {
     margin: 10px 0;
-    font-size: 0.95rem;
+    font-size: 14px;
 }
 
-@media (max-width: 768px) {
-    header h3 {
-        font-size: 1.6rem;
-    }
-
-    .site-header {
-        flex-direction: column;
-        padding: 0 1rem;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .site-header {
-        padding: 0 0.5rem;
-    }
-
-    section {
-        padding: 25px 15px;
-    }
-
-    button[type="submit"] {
-        padding: 12px;
-    }
-}
+Adjust the container to center
