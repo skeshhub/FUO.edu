@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form - FUO-CSI</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="header">
+                <img src="/FUO_Logo.png" alt="FUO-CSI Logo" class="logo">
+                <h3>FEDERAL UNIVERSITY OTUOKE, BAYELSA</h3>
+            </div>
+            <h2>SIGN-UP</h2>
+            
+            <form action="process_registration.php" method="POST">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+                
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+                
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@fuo.edu.ng" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a strong password" required minlength="6">
+                
+
+                <div class="button">
+                    <button type="submit" class="signup">Sign Up</button>
+                    <button type="button" class="login" onclick="window.location.href='index.html'">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
