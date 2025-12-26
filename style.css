@@ -64,19 +64,24 @@ header h3 {
     /* Removed padding – now controlled by .site-header */
 }
 
-.nav ul {
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
+    padding: 0 0 20px 0;             /* Only bottom padding kept */
 }
 
-.nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -237,12 +242,5 @@ footer p {
 
     button[type="submit"] {
         padding: 12px;
-    }
-}
-@media (max-width: 768px) {
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
     }
 }
