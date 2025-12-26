@@ -5,7 +5,7 @@
 }
 nav ul li a.active {
     font-weight: bold;
-    color: #007bff; /* or any color you prefer */
+    color: #007bff;
     text-decoration: underline;
 }
 body {
@@ -15,16 +15,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* Full-screen background image */
     background: url('/background.jpg') no-repeat center center fixed;
-    background-size: cover; /* Changed from 300vh to 'cover' for better scaling */
+    background-size: cover;
 }
 
 .box {
-    /* Frosted glass effect */
-    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
-    backdrop-filter: blur(12px); /* Main blur effect */
-    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     
     padding: 30px;
     border-radius: 10px;
